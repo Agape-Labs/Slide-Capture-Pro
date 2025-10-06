@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideCapture Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">
+                     <img src="icons/1.png" alt="app-icon" width="30" height="30">
+                </div>
+                <div class="brand-text">
+                    <h1>SlideCapture Pro</h1>
+                    <p>by Agape Labs</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Upload Area -->
+            <div id="uploadArea" class="upload-area">
+                <div class="upload-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7,10 12,15 17,10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                </div>
+                <h3>Drag & Drop a PowerPoint file</h3>
+                <p>or</p>
+                <button id="selectFileBtn" class="btn-primary">Select File</button>
+                <input type="file" id="fileInput" accept=".pptx,.ppt" style="display: none;">
+                <p class="file-info">Supports .pptx files up to 500MB</p>
+            </div>
+
+            <!-- Selected File Display -->
+            <div id="selectedFile" class="selected-file" style="display: none;">
+                <div class="file-details">
+                    <div class="file-icon">📄</div>
+                    <div class="file-info">
+                        <h4 id="fileName"></h4>
+                        <p id="fileSize"></p>
+                    </div>
+                    <button id="removeFile" class="btn-remove">&times;</button>
+                </div>
+            </div>
+
+            <!-- Processing Section -->
+            <section id="processingSection" style="display: none;">
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+                <p id="processingText">Processing...</p>
+            </section>
+
+            <!-- Images Section -->
+            <section id="imagesSection" style="display: none;">
+                <div class="images-header">
+                    <h3><span id="imageCount">0</span> Images Found</h3>
+                    <div class="selection-controls">
+                        <button id="selectAll" class="btn-secondary">Select All</button>
+                        <button id="selectNone" class="btn-secondary">Select None</button>
+                    </div>
+                </div>
+                <div id="imagesGrid" class="images-grid"></div>
+                <div class="download-section">
+                    <button id="downloadSelected" class="btn-primary" disabled>Download Selected</button>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section id="errorSection" style="display: none;">
+                 <div class="error-message">
+                    <div class="error-icon">⚠️</div>
+                    <div>
+                        <h4 id="errorText">An error occurred.</h4>
+                        <button id="tryAgain" class="btn-secondary">Try Again</button>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Success Section -->
+            <section id="successSection" style="display: none;">
+                <div class="success-message">
+                    <div class="success-icon">✅</div>
+                    <div>
+                        <h4 id="successText">Download complete!</h4>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer with Agape Labs Logo -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="agape-logo">
+                        <img src="icons/agape_logo.png" alt="Agape Labs Logo" width="24" height="24">
+                    </div>
+                    <div class="footer-text">
+                        <h4>Agape Labs</h4>
+                        <p>Transforming productivity through innovation</p>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 Agape Labs. All rights reserved.</p>
+                    <p>SlideCapture Pro v1.2 - PowerPoint Image Extractor</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Use local JSZip library to avoid CSP issues -->
+    <script src="jszip.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

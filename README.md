@@ -1,9 +1,5 @@
 # SlideCapture Pro
 
-[![version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/YOUR_USERNAME/YOUR_REPO) 
-[![license](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![status](https://img.shields.io/badge/status-actively_maintained-brightgreen.svg)]()
-
 **Extract all images from PowerPoint presentations with ease!**
 
 SlideCapture Pro is a Chrome extension that allows users to extract all embedded images in their original quality from PowerPoint (.pptx) files and download them to their computer. Perfect for designers, content creators, and anyone who needs to extract images from presentations quickly and efficiently.
@@ -18,6 +14,9 @@ SlideCapture Pro is a Chrome extension that allows users to extract all embedded
 - **Progress Tracking**: Real-time progress updates for large file processing
 - **Smart Memory Management**: Optimized for handling large files efficiently
 
+## 📸 Screenshots
+
+![SlideCapture Pro Interface](https://via.placeholder.com/800x600?text=SlideCapture+Pro+Interface)
 
 ## 🛠️ Installation
 

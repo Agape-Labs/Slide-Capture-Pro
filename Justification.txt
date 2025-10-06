@@ -1,0 +1,29 @@
+1. Single-Purpose Description
+This is a clear, one-sentence statement about what your extension does.
+
+"This extension allows users to extract all embedded images in their original quality from a PowerPoint (.pptx) file and download them to their computer."
+
+2. downloads Permission Justification
+This explains why your extension needs to access the chrome.downloads API.
+
+"This permission is essential for the core functionality of the extension, which is to save the user-selected images, packaged as a single .zip file, to the user's local downloads folder."
+
+3. storage Permission Justification
+This explains why your extension needs the chrome.storage API.
+
+"The 'storage' permission is used to save user settings and session information locally on the browser. This allows the extension to remember user preferences for a better experience on future visits, without collecting any personal data."
+
+4. sidePanel Permission Justification
+This explains why your extension needs the chrome.sidePanel API.
+
+"This permission is required to display the extension's user interface in the browser's side panel. This provides a seamless and non-intrusive way for users to interact with the extension alongside their web content."
+
+5. Remote Code Usage
+This section asks if you are loading any code from an external server. Based on our last fix (moving JSZip locally), the answer is no.
+
+Question: Are you using remote code?
+Your Answer: No
+
+Justification for not using remote code:
+
+"This extension does not use any remote code. All JavaScript code, including third-party libraries such as JSZip, is fully included within the extension's package. This ensures maximum security, privacy, and compliance with Chrome's Content Security Policy by preventing any code from being fetched from external servers."
